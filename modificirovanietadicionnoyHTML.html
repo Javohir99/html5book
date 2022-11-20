@@ -236,7 +236,35 @@
         </i>
         <p>Только ни в коем случае не удаляйте альтернативный текст, заменив его пустой строкой, т.к. это будет означать, что рисунок является чисто презентационным и программы чтения экрана должны игнорировать его.</p>
         <h3>Добавление боковой панели с помощью элемента &lt;aside&gt;</h3>
-        <p></p>
-
+        <p>Новый элемент &lt;asida&gt; представляет содержимое, которое по смыслу связано с окружающим его текстом. Например, его можно использовать как врезку в печатной работе, чтобы ввести связанную тему или развить вопрос, исследуемый в основном документе. Логично применять элемент &lt;aside&gt; также в случаях, когда нужно гдето примостить блок объявлений, несколько ссылок на связанное содержимое или даже броскую цитату во врезке.</p>
+        <p>Этот эффект можно с легкостью создать с помощью хорощо приработанного элемента &lt;div&gt;, но элемент &lt;aside&gt; предоставяет более осмыленный способ далеть разметку того же самого содержимого:</p>
+        <i>
+            &lt;p&gt;...(in a suitably robotic voice) "Who's your daddy now?"&lt;/p&gt;<br>
+            &lt;aside class="PullQuode"&gt;<br>
+            We don't know how the universe started , so we can't be sure it<br>
+            won't just end, maybe today.<br>
+            &lt;img src="quotes_end.png" alt="End quote"&gt;<br>
+            &lt;/aside&gt;<br>
+            &lt;h2&gt;Unexplained Singularity&lt;/h2&gt;
+        </i>
+        <p>В этот раз таблица стилей врезает плавющую цитату справа:</p>
+        <i>
+            .PullQuote{<br>
+                float: right;<br>
+                max-width: 300 px;<br>
+                border-top: thin black solid;<br>
+                border-bottom: thin black solid;<br>
+                font-size: 30 px;<br>
+                linr-hight: 130%;<br>
+                font-style: italic;<br>
+                padding-top: 5px;<br>
+                padding-bottom: 5px;<br>
+                margin-left: 15px;<br>
+                margin-bottom: 10px;<br>
+            }
+            .PullQuote img{
+                vertical-align: bottom;
+            }
+        </i>
     </body>
 </html>
